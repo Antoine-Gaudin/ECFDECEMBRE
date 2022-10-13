@@ -2,7 +2,9 @@
 <?php require('bd/dbc.php')?>
 <?php
     session_start();
-    echo $_SESSION['login'];
+	if(!$_SESSION['pass']){
+		header('location:index.php');
+	};
 ?>
 
 <p>tu as réussi a te connecter</p>

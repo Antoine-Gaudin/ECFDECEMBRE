@@ -3,6 +3,9 @@
 <?php 
 session_start();
 $pdo = new PDO('mysql:dbname=membre;host=127.0.0.1;port:3306;','root','agaudin');
+if(!$_SESSION['pass']){
+	header('location:index.php');
+}
 $recupUser = $pdo->query('SELECT*FROM structure');
 while($user = $recupUser->fetch()){
     ?>

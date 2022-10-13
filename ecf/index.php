@@ -25,10 +25,10 @@
 
 <form name="fo" method="post" action="">
     <div class="label">login</div>
-    <input type="text" name="login"/>
+    <input type="text" name="login" autocomplete="off" required/>
     <br>
     <div class="label">mot de passe</div>
-    <input type="password" name="pass"/>
+    <input type="password" name="pass"  required/>
     <br>
     <input type="submit" name="valider" value="s'authentifier">
 </form>
